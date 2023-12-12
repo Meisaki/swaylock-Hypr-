@@ -7,7 +7,6 @@ Swaylock is a screen locker for the Sway Wayland compositor.{this config Is Twea
 - [Usage](#usage)
 - [Configuration](#configuration)
 - [Troubleshooting](#troubleshooting)
-- [Contributing](#contributing)
 - [License](#license)
 
 ## Features
@@ -68,13 +67,13 @@ swaylock -C $HOME/.config/swaylock/config
 nano $HOME/.config/swaylock/config
 ```
 ### Tweaking
-- Its divided in to 5 main setting (Normal + Verifying + Cleared + Wrong + Capslock)
+- Its divided in to 5 main setting (Normal + Verifying + Wrong + Cleared + Capslock)
   - Normal(32)
      - Ring (1-4)
      - Text & layout (5-10)
      - Indicator & Basic (11-32)
 1. `line-color=rrggbbaa` here it change color of border of ring
-2. `line-uses-inside=rrggbbaa` here it uses the line color as inside of ring and line (do not use sometime its cause like passsword wrong and  this can be accomplished by just line-color)
+2. `line-uses-inside=rrggbbaa` here it uses the line color as inside of ring and line (do not use sometime its cause like password wrong and  this can be accomplished by just line-color)
 3. `line-uses-ring` here it uses the opposite of 2 as it use ring color (just add it will apply no need for a parameter or value)
 4. `ring-color=rrggbbaa` here it change color of ring when its idle or typing
 5. `font=_____` here you can change font of text
@@ -98,7 +97,7 @@ nano $HOME/.config/swaylock/config
 23.  `color=rrggbbaa` change color of the lockscreen (default is white as ffffff)
 24.  `image=/path/to/you` add image as lockscreen (replace /path/to/you with your location of image)
 25.  `scaling=__` you scale image to fill,stretch,fit,center,tile(if its set into solid_color then even if set image it will show color)
-26.  `tiling` its same as if you put scaling as tiling
+26.  `tiling` its same as if you put scaling as tiling (no value)
 27.  `debug` as its say it will output error or (reason sometime)
 28.  `ignore-empty-password` it will not react if there is nothing (simple)
 29.  `show-failed-attempts` it will print the wrong or invalid attempt (its only print not set value as maximum attempt)
@@ -106,9 +105,44 @@ nano $HOME/.config/swaylock/config
 31.  `help` it will show typical help list
 32.  `version` it will print version of swaylock  
 
-(just saying its end )
-
-     - Verfying ()
+     - Verfying (4)
        
-1. `inside-ver-color=rrggbbaa`    
-     
+- `inside-ver-color=rrggbbaa` change color of inside when verifying (pass or string are verifying)
+- `line-ver-color=rrggbbaa` change color between ring and line when verifying 
+- `ring-ver-color=rrggbbaa` change color of the ring when verifying 
+- `text-ver-color` change color of the text when verfying 
+
+     - Wrong(4)
+       
+- `inside-wrong-color=rrggbbaa` change color of inside when wrong (when input is wrong)
+- `line-wrong-color=rrggbbaa` change color between ring and line when wrong
+- `ring-wrong-color` change color of the ring when wrong 
+- `text-wrong-color` change color of the text when wrong
+  
+     -  Cleared(4)
+       
+- `inside-clear-color=rrggbbaa` change color of inside when cleared (it can be appear if use backspace to clear wrong pass or strings)
+- `line-clear-color=rrggbbaa` change color between ring and line when cleared
+- `ring-clear-color=rrggbbaa` change color of the ring when cleared
+- `text-clear-color=rrggbbaa` change color of the text when cleared
+  
+     -  Capslock(8)
+       
+- `disable-caps-lock-text` its disable text if capslock is on
+- `indicator-caps-lock` its show capslock is on (no value)
+- `caps-lock-bs-hl-color=rrggbbaa` its change color of backspace segment of ring if capslock is on
+- `caps-lock-key-hl-color=rrggbbaa` its change color of typing segments of ring if capslock is on
+- `inside-caps-lock-color=rrggbbaa` its chnage color of inside if capslock is on
+- `line-caps-lock-color=rrggbbaa` its chnage color between ring and line if capslock is on
+- `ring-caps-lock-color=rrggbbaa` its change color of ring if capslock is on
+- `text-caps-lock-color=rrggbbaa` its change color of text if capslock is on
+
+ ## Troubleshooting
+
+- Use debug output to know most problem reason or orgin
+
+- You can use ChatGpt to know more about value  (guess something you knew)
+
+## License
+
+- Refer to `LICENSE` file 
