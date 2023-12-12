@@ -69,16 +69,46 @@ nano $HOME/.config/swaylock/config
 ```
 ### Tweaking
 - Its divided in to 5 main setting (Normal + Verifying + Cleared + Wrong + Capslock)
-  - Normal(28)
+  - Normal(32)
      - Ring (1-4)
-     - Text (5)
+     - Text & layout (5-10)
+     - Indicator & Basic (11-32)
 1. `line-color=rrggbbaa` here it change color of border of ring
 2. `line-uses-inside=rrggbbaa` here it uses the line color as inside of ring and line (do not use sometime its cause like passsword wrong and  this can be accomplished by just line-color)
-3. `line-uses-ring=rrggbbaa` here it uses the opposite of 2 as it use ring color
+3. `line-uses-ring` here it uses the opposite of 2 as it use ring color (just add it will apply no need for a parameter or value)
 4. `ring-color=rrggbbaa` here it change color of ring when its idle or typing
 5. `font=_____` here you can change font of text
 6. `font-size=19` you can set size of font as text but sometime it only change time size not its down
-7. `layout-bg-color=rrggbbaa`
-8. `
-      
+7. `layout-bg-color=rrggbbaa` you can change color of box where text is there (in my case it background of box)
+8. `layout-border-color=rrggbbaa` its kind of 1 but as its not related to ring
+9. `layout-text-color=rrggbbaa` you can set here color of layout text 
+10. `text-color=rrggbbaa` as its say it change text color
+11. `no-unlock-indicator` it disable the indicator (indicator or box will be there but its removed as visibility) (no value needed)
+12. `indicator-idle-visible` use when you want to show always indicator or box in lockscreen (no value) 
+13. `indicator-radius=____` radius increase as its value decrease or vice versa
+14. `indicator-thickness=___` it will increase ring thickness or radius thickness or vice versa (default value is 10)
+15.  `indicator-x-position=___` its used when you want to change indicator or box width (i measured as putting it with random values)
+16.  `indicator-y-position=___` its used when you want to change indicator or box height (i measured as putting it with random values)
+17.  `inside-color=rrggbbaa` it change color of a indicator
+18.  `separator-color=rrggbbaa` it will change color of start and end of segment (segment appear when you type)
+19.  `key-hl-color=rrggbbaa`it highlight color of key that segments color (do not get confuse with 17 read it )
+20.  `show-keyboard-layout` it will show current layout of keyboard in typing (no value)
+21.  `hide-keyboard-layout` it will hide current or others layout in typing (if you set this it will not show even if you show keyboard option) (no value)
+22.  `bs-hl-colo` this change color when you press backspace (segment will change color specifically for backspace)
+23.  `color=rrggbbaa` change color of the lockscreen (default is white as ffffff)
+24.  `image=/path/to/you` add image as lockscreen (replace /path/to/you with your location of image)
+25.  `scaling=__` you scale image to fill,stretch,fit,center,tile(if its set into solid_color then even if set image it will show color)
+26.  `tiling` its same as if you put scaling as tiling
+27.  `debug` as its say it will output error or (reason sometime)
+28.  `ignore-empty-password` it will not react if there is nothing (simple)
+29.  `show-failed-attempts` it will print the wrong or invalid attempt (its only print not set value as maximum attempt)
+30.  `daemonize` it will removed from terminal after locking (i am not writing this Note: this is the default behavior of i3lock.)
+31.  `help` it will show typical help list
+32.  `version` it will print version of swaylock  
+
+(just saying its end )
+
+     - Verfying ()
+       
+1. `inside-ver-color=rrggbbaa`    
      
